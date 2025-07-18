@@ -1,9 +1,53 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TNLWorks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>TNLWorks</h1>
+    <p>20 Yıllık Deneyimle Güçlü Çözümler</p>
+    <a href="#contact" class="btn">İletişime Geçin</a>
+  </header>
+
+  <section class="services">
+    <h2>Hizmetlerimiz</h2>
+    <ul>
+      <li><strong>Cloud Çözümleri:</strong> Huawei Cloud, AWS, Azure altyapıları</li>
+      <li><strong>DevOps Çözümleri:</strong> CI/CD, otomasyon</li>
+      <li><strong>SRE & Monitoring:</strong> İzleme, uyarı sistemleri</li>
+      <li><strong>Infrastructure:</strong> Sunucu, ağ ve veri merkezi çözümleri</li>
+      <li><strong>Database:</strong> Kurulum, performans, yedekleme</li>
+    </ul>
+  </section>
+
+  <section class="why">
+    <h2>Neden TNLWorks?</h2>
+    <ul>
+      <li>20 yıllık saha ve danışmanlık deneyimi</li>
+      <li>Platform bağımsız, sade ve çözüm odaklı yaklaşım</li>
+      <li>Hızlı geri dönüş ve sonuç odaklı ilerleme</li>
+      <li>Kurumsal düzeyde teknolojik danışmanlık</li>
+      <li>Karışık değil, anlaşılır çözümler</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>İletişim</h2>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Ad Soyad" required />
+      <input type="email" name="email" placeholder="E-Posta" required />
+      <input type="text" name="phone" placeholder="Telefon (isteğe bağlı)" />
+      <textarea name="message" placeholder="Mesajınız" required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TNLWorks. Tüm hakları saklıdır.</p>
+  </footer>
+</body>
 </html>
