@@ -151,5 +151,62 @@ const experiences = {
 // const blog = {
 //   show: false,
 // };
-
+export const servicesData = [
+  {
+    title: "Designing secure, scalable cloud infrastructure and managing smooth migration to Huawei Cloud, AWS, Azure, or GCP.",
+    imageKey: "cloud", // Bu key `serviceImages` objesindeki görselle eşleşmeli
+    details: [
+      "Multi-cloud & hybrid architecture planning",
+      "Secure VPC, subnet, and identity configurations",
+      "Cross-platform migration (AWS ⇄ Azure ⇄ GCP ⇄ Huawei)",
+      "Cloud-native design & disaster recovery setup",
+      "AWS, Azure, GCP & Huawei Cloud production experience"
+    ]
+  },
+  {
+    title: "CI/CD pipelines, infrastructure-as-code, and release automation tailored for your speed and reliability goals.",
+    imageKey: "devops", // Bu key serviceImages.devops ile eşleşmeli
+    details: [
+      "CI/CD pipelines with GitHub Actions, GitLab & Jenkins",
+      "Infrastructure-as-Code with Terraform & Ansible",
+      "Automated testing and quality gates (SonarQube, etc.)",
+      "Container orchestration (Docker, Kubernetes)",
+      "Fast and secure release management workflows"
+    ]
+  },
+  {
+    title: "Implementing SRE practices and intelligent observability to proactively ensure service health and performance.",
+    imageKey: "sre", // Görsel eşleşmesi için ileride eklenmeli
+    details: [
+      "Proactive incident detection & alerting",
+      "SLI/SLO/SLAs with real-time dashboards",
+      "Prometheus, Grafana, ELK, APM integrations",
+      "Error budgeting and reliability engineering",
+      "Root cause analysis and postmortem practices"
+    ]
+  },
+  {
+    title: "On-prem to hybrid architecture, VMware-based solutions, network design, and reliable system operations.",
+    imageKey: "infra", // Görsel eşleşmesi için ileride eklenmeli
+    details: [
+      "On-prem & hybrid cloud architecture design",
+      "VMware vSphere, ESXi & VCF implementations",
+      "Enterprise-grade networking & security setup",
+      "High-availability & disaster recovery planning",
+      "System health monitoring and maintenance"
+    ]
+  },
+  {
+    title: "Setup, scaling, replication, and performance tuning of SQL/NoSQL systems for mission-critical applications.",
+    imageKey: "db", // Görsel eşleşmesi için ileride eklenmeli
+    details: [
+      "SQL & NoSQL setup (MySQL, PostgreSQL, MongoDB, etc.)",
+      "Scaling, replication & clustering strategies",
+      "Performance tuning & query optimization",
+      "Backup, restore & disaster recovery plans",
+      "Secure configuration & access management"
+    ]
+  },
+  // diğer servisler aynı formatta devam edebilir
+];
 export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
