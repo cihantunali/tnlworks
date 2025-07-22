@@ -1,6 +1,7 @@
 import React from "react";
 import "../../scss/whytnlworks.scss";
 
+
 const WhyTNLWorks = () => {
   return (
     <section className="why-tnlworks" id="why-tnlworks">

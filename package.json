@@ -1,7 +1,7 @@
 {
   "name": "developers-portfolio",
   "description": "A personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects.",
-  "homepage": "http://tnl.works",
+  "homepage": "https://tnl.works",
   "version": "2.0.0",
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
@@ -12,9 +12,11 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
     "gh-pages": "^4.0.0",
+    "lucide-react": "^0.525.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
     "react-loading-skeleton": "^3.1.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",

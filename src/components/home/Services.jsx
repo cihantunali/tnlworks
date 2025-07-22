@@ -1,50 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../scss/Services.scss";
 import { servicesData } from "../../editable-stuff/config";
-import ServiceCloud from "../../assets/img/service-cloud.png";
-import ServiceDevops from "../../assets/img/service-devops.png";
-import ServiceSre from "../../assets/img/sre.png";
-import ServiceInfra from "../../assets/img/infra.png";
-import ServiceDb from "../../assets/img/db.png";
+import { FaCloud, FaCogs, FaChartLine, FaNetworkWired, FaDatabase } from "react-icons/fa";
 
-
-
+const iconMap = {
+  cloud: <FaCloud />,
+  devops: <FaCogs />,
+  sre: <FaChartLine />,
+  infra: <FaNetworkWired />,
+  db: <FaDatabase />
+};
 
 const Services = () => {
-  const serviceImages = {
-    cloud: ServiceCloud,
-    devops: ServiceDevops,
-    sre: ServiceSre,
-    infra: ServiceInfra,
-    db: ServiceDb,
-  };
+  const [activeTab, setActiveTab] = useState("cloud");
+
+  const activeService = servicesData.find(s => s.imageKey === activeTab);
+
   return (
     <section className="services-section" id="services">
       <h2 className="section-title">What I Do</h2>
-      <div className="services-grid">
-        {servicesData.map((service, index) => (
-          <div className="service-card" key={index}>
-            <div className="service-image-wrapper">
-              <img
-                src={serviceImages[service.imageKey]}
-                alt={service.title}
-                className="service-image"
-              />
-            </div>
-            
-            <div className="service-title">{service.title}</div>
-            
-            <div className="service-check-list">
-            {service.details.map((detail, i) => (
-            <div className="check-item" key={i}>
-            <span className="check-icon">✓</span>
-            <span className="check-text">{detail}</span>
-            </div>
-  ))}
-</div>
-            
-          </div>
+
+      {/* Tabs */}
+      <div className="tab-buttons">
+        {servicesData.map(service => (
+          <button
+            key={service.imageKey}
+            className={`tab-button ${activeTab === service.imageKey ? "active" : ""}`}
+            onClick={() => setActiveTab(service.imageKey)}
+          >
+            {iconMap[service.imageKey]} {service.title}
+          </button>
         ))}
+      </div>
+
+      {/* Active Tab Content */}
+      <div className="tab-content">
+        <div className="service-card">
+          <div className="service-image-wrapper">
+            <img
+              src={activeService.image} 
+              alt={activeService.title}
+              className="service-image"
+            />
+          </div>
+          <p className="service-description">{activeService.description}</p>
+          <ul className="service-details">
+  {activeService.details.map((detail, i) => (
+    <li key={i}>
+      <span style={{ color: "#20549c", marginRight: "8px" }}>✔</span>
+      {detail}
+    </li>
+  ))}
+</ul>
+        </div>
       </div>
     </section>
   );

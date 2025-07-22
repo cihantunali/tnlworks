@@ -1,32 +1,17 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
+import "../scss/Footer.scss";
 
-const Footer = (props) => {
-  const bgStyle = { backgroundColor: "#f5f5f5" };
-
+export default function Footer() {
   return (
-    <footer style={bgStyle} className="mt-auto py-5 text-center ">
-      <Container>
-        {props.children}
-        <i className="fas fa-code" /> with <i className="fas fa-heart" /> by{" "}
-        <a
-          rel="noopener"
-          href="https://github.com/hashirshoaeb"
-          aria-label="My GitHub"
-        > <span className="badge bg-dark">
-            Hashir Shoaib
-          </span>
-        </a>{" "}
-        using <i className="fab fa-react" />
+    <footer className="footer">
+      <div className="footer-content">
         <p>
-          <small className="text-muted">
-            Project code is open source. Feel free to fork and make your own
-            version.
-          </small>
+          © {new Date().getFullYear()} <span className="tnl-brand">TNLWorks</span> — All rights reserved.
         </p>
-      </Container>
+        <p className="footer-note">
+          This site is built with React & GitHub Pages. Open-source and free to customize.
+        </p>
+      </div>
     </footer>
   );
-};
-
-export default Footer;
+}

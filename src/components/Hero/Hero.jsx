@@ -10,6 +10,12 @@ const Hero = () => {
         <p className="tagline">Cloud & DevOps Consultant based in Istanbul.</p>
         <a href="mailto:hello@tnl.works" className="cta-button">Let’s connect</a>
       </div>
+      <div className="hero-wrapper">
+        <div className="stars" />
+        <div className="hero-content">
+        {/* Başlık, yazı, buton vs */}
+      </div>
+</div>
     </section>
   );
 };
